@@ -1,0 +1,48 @@
+{
+  "name": "ai-engineering",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "biome check --write",
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "preview": "vite preview",
+    "build": "tsc -b && vite build"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.66.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.4",
+    "@chromatic-com/storybook": "^4.1.2",
+    "@eslint/js": "^9.36.0",
+    "@storybook/addon-a11y": "^10.0.7",
+    "@storybook/addon-docs": "^10.0.7",
+    "@storybook/addon-onboarding": "^10.0.7",
+    "@storybook/addon-vitest": "^10.0.7",
+    "@storybook/react-vite": "^10.0.7",
+    "@tailwindcss/vite": "^4.1.17",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/coverage-v8": "^4.0.7",
+    "globals": "^16.4.0",
+    "jsdom": "^27.1.0",
+    "storybook": "^10.0.7",
+    "tailwindcss": "^4.1.17",
+    "typescript": "~5.9.3",
+    "vite": "npm:rolldown-vite@7.1.14",
+    "vitest": "^4.0.7"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.14"
+  }
+}
