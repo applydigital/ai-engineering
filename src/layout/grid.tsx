@@ -1,5 +1,5 @@
+import { sanitizeTailwindClassnames } from "@utilities/sanitizeTailwindClassnames";
 import type { ReactNode } from "react";
-import { sanitizeTailwindClassnames } from "../utilities/sanitizeTailwindClassnames";
 
 interface GridProps {
   children: ReactNode;

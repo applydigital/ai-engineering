@@ -1,7 +1,7 @@
+import { AtButton } from "@components/atoms/AtButton";
+import { AtNumberField } from "@components/atoms/AtNumberField";
 import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { AtButton } from "../AtButton";
-import { AtNumberField } from "../AtNumberField";
 
 export interface MlBidFormProps {
   onSubmit: (bid: number) => void;

@@ -1,8 +1,8 @@
-import a from "../assets/art/a.png";
-import b from "../assets/art/b.png";
-import c from "../assets/art/c.png";
-import d from "../assets/art/d.png";
-import e from "../assets/art/e.png";
+import a from "@art/a.png";
+import b from "@art/b.png";
+import c from "@art/c.png";
+import d from "@art/d.png";
+import e from "@art/e.png";
 
 export interface ArtImage {
   src: string;

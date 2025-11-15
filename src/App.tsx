@@ -1,7 +1,7 @@
-import { AtBidTicker, AtImage, MlBidForm } from "./components";
-import { artImages } from "./data/artImages";
-import { useBidding, useRandomArt } from "./hooks";
-import { Container, Grid } from "./layout";
+import { AtBidTicker, AtImage, MlBidForm } from "@components/index";
+import { useBidding, useRandomArt } from "@hooks/index";
+import { Container, Grid } from "@layout/index";
+import { artImages } from "@data/artImages";
 import "./App.css";
 
 const App = () => {

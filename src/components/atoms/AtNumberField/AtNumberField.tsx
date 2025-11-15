@@ -1,6 +1,6 @@
+import { sanitizeTailwindClassnames } from "@utilities/sanitizeTailwindClassnames";
 import type { InputHTMLAttributes } from "react";
 import type { UseFormRegisterReturn } from "react-hook-form";
-import { sanitizeTailwindClassnames } from "../../utilities/sanitizeTailwindClassnames";
 
 export interface AtNumberFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {

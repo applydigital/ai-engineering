@@ -10,6 +10,15 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@art/*": ["./src/assets/art/*"],
+      "@components/*": ["./src/components/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@utilities/*": ["./src/utilities/*"],
+      "@data/*": ["./src/data/*"]
+    },
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",

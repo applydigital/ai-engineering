@@ -1,5 +1,5 @@
+import { sanitizeTailwindClassnames } from "@utilities/sanitizeTailwindClassnames";
 import type { ImgHTMLAttributes } from "react";
-import { sanitizeTailwindClassnames } from "../../utilities/sanitizeTailwindClassnames";
 
 export interface AtImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   alt: string;

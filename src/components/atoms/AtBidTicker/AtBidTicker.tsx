@@ -1,5 +1,5 @@
+import { sanitizeTailwindClassnames } from "@utilities/sanitizeTailwindClassnames";
 import { useEffect, useRef, useState } from "react";
-import { sanitizeTailwindClassnames } from "../../utilities/sanitizeTailwindClassnames";
 
 export interface AtBidTickerProps {
   bid: number;
