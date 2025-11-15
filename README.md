@@ -1,73 +1,163 @@
-# React + TypeScript + Vite
+# AI Engineering Sandbox - Art Bidding Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sandbox application for Ai engineering experimentation.
 
-Currently, two official plugins are available:
+The sandbox app is a rudimentary art auction app built with Typescript React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Current functionality is deliberately limited; Users submit a bid and if the bid is higher then the existing bid it is accepted. Validation is enforced by React Hook forms to ensure a lower bid is never accepted.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Framework:** React 19.1.1
+- **Language:** TypeScript 5.9.3
+- **Build Tool:** Vite (Rolldown variant 7.1.14)
+- **Styling:** Tailwind CSS 4.1.17
+- **Forms:** React Hook Form 7.66.0
+- **Testing:** Vitest 4.0.7 + React Testing Library
+- **Component Documentation:** Storybook 10.0.7
+- **Linting/Formatting:** Biome 2.3.4
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project has strict engine requirements:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Node.js:** >= 20.19.5
+- **npm:** >= 10.8.2
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone <repository-url>
+cd ai-engineering
+
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## NPM Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Start development server (http://localhost:5173)
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Run tests in watch mode
+npm test
+
+# Run Storybook component documentation (http://localhost:6006)
+npm run storybook
+
+# Lint and format code with Biome
+npm run lint
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+## Project Structure
+
+```
+ai-engineering/
+├── src/
+│   ├── assets/
+│   │   └── art/              # Art images for auction
+│   ├── components/
+│   │   ├── atoms/            # Atomic design - basic UI components
+│   │   └── molecules/        # Molecular design - composed components
+│   ├── data/
+│   │   └── artImages.ts      # Art image index
+│   ├── hooks/
+│   │   ├── useBidding.ts     # Bid management logic
+│   │   └── useRandomArt.ts   # Random art selection
+│   ├── layout/
+│   │   ├── container.tsx     # Container component
+│   │   └── grid.tsx          # Grid layout component
+│   ├── test/
+│   │   └── setup.ts          # Test configuration
+│   ├── utilities/
+│   │   └── sanitizeTailwindClassnames.ts
+│   ├── App.tsx               # Main application component
+│   └── main.tsx              # Application entry point
+├── .storybook/               # Storybook configuration
+└── public/                   # Static assets
+```
+
+## Component Naming Convention
+
+- **At prefix** (Atomic): Core UI components (AtImage, AtBidTicker)
+- **Ml prefix** (Molecular): Composed components with logic (MlBidForm)
+
+## Development Workflow
+
+### Running the Application
+
+Start the development server with this command:
+
+```bash
+npm run dev
+```
+
+Vite has HMR out of the box, you do not need to manually refresh your browser upon code changes
+
+### Storybook
+
+We use Storybook to document components and to surgically uphold VQA standards:
+
+```bash
+npm run storybook
+```
+
+### Testing
+
+The project uses:
+
+- Vitest+React Testing Library for unit testing
+- @testing-library/user-event for interaction testing
+
+Run the test suite via:
+
+```bash
+npm test
+```
+
+### Code Quality
+
+Biome handles both linting and formatting, providing fast feedback on code quality issues.
+We recommend installing the Biome VS Code extension
+
+To Format and lint your code, run this command:
+
+```bash
+npm run lint
+```
+
+## Building for Production
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Key Features
+
+### Bidding System
+
+The application uses a custom `useBidding` hook to manage:
+
+- Current bid state
+- Minimum bid validation
+- Bid submission handling
+
+### Random Art Display
+
+The `useRandomArt` hook cycles through art images, creating a dynamic auction experience on every page reload.
