@@ -7,7 +7,7 @@ export interface AtImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export const AtImage = ({ className = "", alt, src }: AtImageProps) => (
-  <div
+  <figure
     className={sanitizeTailwindClassnames(`
         relative overflow-hidden
         border
@@ -24,5 +24,5 @@ export const AtImage = ({ className = "", alt, src }: AtImageProps) => (
       alt={alt}
       src={src}
     />
-  </div>
+  </figure>
 );
