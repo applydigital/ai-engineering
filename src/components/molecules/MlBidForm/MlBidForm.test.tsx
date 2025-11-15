@@ -43,7 +43,7 @@ describe("MlBidForm", () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("You need to beat the current bid.")
+        screen.getByText("You need to beat the current bid."),
       ).toBeDefined();
     });
 
@@ -81,7 +81,7 @@ describe("MlBidForm", () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("You need to beat the current bid.")
+        screen.getByText("You need to beat the current bid."),
       ).toBeDefined();
     });
 
@@ -90,7 +90,7 @@ describe("MlBidForm", () => {
 
   it("applies custom className", () => {
     const { container } = render(
-      <MlBidForm onSubmit={() => {}} minBid={50} className="custom-class" />
+      <MlBidForm onSubmit={() => {}} minBid={50} className="custom-class" />,
     );
 
     const form = container.querySelector("form");

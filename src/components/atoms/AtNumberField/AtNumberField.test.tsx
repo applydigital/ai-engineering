@@ -43,7 +43,7 @@ describe("AtNumberField", () => {
 
   it("accepts custom className", () => {
     render(
-      <AtNumberField className="custom-class" label="Custom Class field" />
+      <AtNumberField className="custom-class" label="Custom Class field" />,
     );
     const input = screen.getByRole("spinbutton");
     expect(input.className).toContain("custom-class");

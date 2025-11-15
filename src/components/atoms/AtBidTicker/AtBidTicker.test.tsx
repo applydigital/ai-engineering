@@ -39,7 +39,7 @@ describe("AtBidTicker", () => {
         expect(heading.className).toContain("scale-100");
         expect(heading.className).toContain("text-white");
       },
-      { timeout: 600 }
+      { timeout: 600 },
     );
   });
 
