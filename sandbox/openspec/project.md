@@ -48,6 +48,11 @@ An interactive art bidding application that allows users to view random artwork 
 - **Separation of concerns** Components should only contain presentation logic, business logic should be abstracted into custom hooks or utilities
 
 ### Testing Strategy
+- **Test-Driven Development**: REQUIRED - All features must be implemented using TDD
+  - Write failing tests first that define expected behavior
+  - Tests must be reviewed and approved before implementation
+  - Implementation should make tests pass without modifying test expectations
+  - Each requirement must have corresponding test coverage
 - **Unit Tests**: Vitest with jsdom environment
 - **Component Testing**: React Testing Library with user-event
 - **Test Location**: Co-located with components (`*.test.tsx`)

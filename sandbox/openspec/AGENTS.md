@@ -51,10 +51,14 @@ Track these steps as TODOs and complete them one by one.
 1. **Read proposal.md** - Understand what's being built
 2. **Read design.md** (if exists) - Review technical decisions
 3. **Read tasks.md** - Get implementation checklist
-4. **Implement tasks sequentially** - Complete in order
-5. **Confirm completion** - Ensure every item in `tasks.md` is finished before updating statuses
-6. **Update checklist** - After all work is done, set every task to `- [x]` so the list reflects reality
-7. **Approval gate** - Do not start implementation until the proposal is reviewed and approved
+4. **Write tests first (TDD)** - Before implementing any feature:
+   - Write failing tests that define expected behavior
+   - Request review and approval of tests before proceeding
+   - Tests must cover all scenarios from spec deltas
+5. **Implement tasks sequentially** - Complete in order, making tests pass
+6. **Confirm completion** - Ensure every item in `tasks.md` is finished and all tests pass
+7. **Update checklist** - After all work is done, set every task to `- [x]` so the list reflects reality
+8. **Approval gate** - Do not start implementation until the proposal is reviewed and approved
 
 ### Stage 3: Archiving Changes
 After deployment, create separate PR to:
@@ -197,11 +201,17 @@ If multiple capabilities are affected, create multiple delta files under `change
 
 4. **Create tasks.md:**
 ```markdown
-## 1. Implementation
-- [ ] 1.1 Create database schema
-- [ ] 1.2 Implement API endpoint
-- [ ] 1.3 Add frontend component
-- [ ] 1.4 Write tests
+## 1. Test Specification (TDD)
+- [ ] 1.1 Write tests for database schema
+- [ ] 1.2 Write tests for API endpoint
+- [ ] 1.3 Write tests for frontend component
+- [ ] 1.4 Get test approval
+
+## 2. Implementation
+- [ ] 2.1 Implement database schema (make tests pass)
+- [ ] 2.2 Implement API endpoint (make tests pass)
+- [ ] 2.3 Implement frontend component (make tests pass)
+- [ ] 2.4 Verify all tests pass
 ```
 
 5. **Create design.md when needed:**
