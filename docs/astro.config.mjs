@@ -15,9 +15,10 @@ export default defineConfig({
                   items: [
                       { label: 'Claude Setup - VS Code', slug: 'guides/claude-setup-vs-code' },
                       { label: 'Claude Setup - Terminal', slug: 'guides/claude-setup-terminal' },
+                      { label: 'Debug Exercise', slug: 'guides/debugging-exercise'},
                       { label: 'Adding a MCP', slug: 'guides/adding-mcp'},
-                      { label: 'Adding a Claude Hook', slug: 'guides/add-a-claude-hook'}
-
+                      { label: 'Adding a Claude Hook', slug: 'guides/add-a-claude-hook'},
+                      { label: 'Install OpenSpec', slug: 'guides/install-openspec'}
                   ],
               },
               {
