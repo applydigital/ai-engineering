@@ -4,12 +4,10 @@ export const useBidding = (initialBid: number = 100) => {
   const [currentBid, setCurrentBid] = useState(initialBid);
 
   const submitBid = (bid: number) => {
-    if (bid > currentBid) {
+    if (bid < currentBid) {
       setCurrentBid(bid);
-      alert(`Bid accepted: $${bid}`);
-    } else {
-      alert(`Bid must be higher than current bid of $${currentBid}`);
     }
+    return;
   };
 
   // Minimum bid is the higher of current bid or 100
