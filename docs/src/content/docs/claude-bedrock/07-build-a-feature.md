@@ -9,7 +9,6 @@ This guide details the workflow for implementing a new software capability using
 
 - OpenSpec Initialized
 - Claude Code setup
-- Context: You have a clear functional goal
 
 ---
 
