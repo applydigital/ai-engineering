@@ -40,6 +40,7 @@ Lets now invoke the registered MCP from the Claude chat to perform the verificat
 check the pagespeed performance of nfl.com
 ```
 
+3. If Successful, Claude will now run a pagespeed test on nfl.com and give you an analysis of the results.
 
 ---
 ## Notes

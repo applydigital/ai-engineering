@@ -43,7 +43,7 @@ In the next few workshops, we'll be using the OpenSpec Workflow to perform some 
 - Spec Driven Development pairs really well with Test Driven Development. Task Claude to scaffold the tests first and review that before proceeding to generate any code. To modify OpenSpec to follow TDD, simply add the direction to follow TDD in the following files/sections:
       1. `openspec/Agents.md` - implementation workflow and tasks.md template sections
       2. `openspec/project.md` - testing strategy section
-- This is an evolving area and there are also other contempoary approaches like BMAD and Spec-Kit which approach spec driven development slightly differently. We encourage you to explore these options as well to compare approaches.
+- This is an evolving area and there are also other contemporary approaches like BMAD and Spec-Kit which approach spec driven development slightly differently. We encourage you to explore these options as well to compare approaches.
 
 
 ## Further Reading

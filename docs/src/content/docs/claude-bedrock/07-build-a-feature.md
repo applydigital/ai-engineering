@@ -12,7 +12,7 @@ This guide details the workflow for implementing a new software capability using
 
 ---
 
-> ℹ️ We've provided a sandbox repo that's already been initialized with Openspec. That being said, feel free to adapt the steps to a repo of your choosing as well. 
+> ℹ️ We've provided a [sandbox repo](https://github.com/applydigital/ai-engineering/tree/openspec/sandbox) that's already been initialized with Openspec. That being said, feel free to adapt the steps to a repo of your choosing as well. 
 
 ### Step 1. Scaffold the Change Proposal
 1. Initiate the OpenSpec workflow by using this command in Claude:
@@ -71,8 +71,6 @@ Let's proceed to implement the changes
  > ℹ️ During the development of this workshop, we found the Artwork rotation functionality sometimes was not invoked when the timer expired. We realized this was because there was no test to cover this side effect between hooks so Claude was unable to catch it when it was generating the code. Once test coverage was added, this bug ceased to occur. We've left the imperfect code here for you to experiment with. 
 
 
-3.
-
 ### Step 4: Archive the Spec
 1. Once the feature is complete, we must archive it so Claude knows it can move on and remove it from it's context memory. 
 ```
@@ -90,5 +88,5 @@ openspec:archive {{ name of the spec we previously generated eg. "add-artwork-ti
 
 
 ## Further Reading
--[OpenSpec](https://github.com/Fission-AI/OpenSpec/) Github
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec/) Github
 - A decent [Article](https://medium.com/coding-nexus/openspec-a-spec-driven-workflow-for-ai-coding-assistants-no-api-keys-needed-d5b3323294fa) explaining OpenSpec

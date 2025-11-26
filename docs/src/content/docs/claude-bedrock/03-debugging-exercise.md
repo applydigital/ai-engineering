@@ -9,11 +9,11 @@ This guide shows how to fix a bug with Claude.
 ## Prerequisites
 
 - Claude Code 
-- A codebase you can experiement in
+- A codebase you can experiment in
 
 ---
 
-> ℹ️ We've provided a sandbox repo for your convenience, however feel free to adapt the steps to a repo of your choosing as well. 
+> ℹ️ We've provided a [sandbox repo](https://github.com/applydigital/ai-engineering/tree/main/sandbox) for your convenience, however feel free to adapt the steps to a repo of your choosing as well. 
 
 ### Step 1: Understand the Code
 
@@ -51,8 +51,8 @@ Feel free to continue to experiement too.
 
 ---
 ## Notes
-- Claude is capable of taking plain language directions and traversing the file system to find the relevant files to pull in as context but this can sometimes backfire. For minimum friction we always encourage users to clearly instruct Claude which files it should look into as a starting point when debugging
+- Claude is capable of taking plain language directions and traversing the file system to find the relevant files to pull in as context but this can sometimes backfire. For minimum friction, we always encourage users to clearly instruct Claude which files it should look into as a starting point when debugging
 - If tests are provided, Claude is also able to iterate upon itself and validate that the code modifications still adhere to the previous tests assertions. Taking a step back, we find Test Driven Development really flourishes with Ai Tooling.
 
 ## Further Reading
-- [Prompt Engineering Guide](https://www.promptingguide.ai/) - a very thorough guide on Prompt engineering with some good explanations on how LLMs interpret plain language istructions
+- [Prompt Engineering Guide](https://www.promptingguide.ai/) - a very thorough guide on Prompt engineering with some good explanations on how LLMs interpret plain language instructions
