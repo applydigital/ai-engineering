@@ -8,6 +8,11 @@ export default defineConfig({
   integrations: [
       starlight({
           title: 'Ai Engineering Workshop',
+          favicon: '/favicon.ico',
+          logo: {
+            light: './src/assets/light-logo.png',
+            dark: './src/assets/dark-logo.png',
+          },
           social: [{ icon: 'github', label: 'Github', href: 'https://github.com/applydigital/ai-engineering' }],
           components: {
               Head: './src/components/starlight/Head.astro',
