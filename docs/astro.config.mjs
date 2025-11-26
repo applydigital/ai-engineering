@@ -8,7 +8,11 @@ export default defineConfig({
   integrations: [
       starlight({
           title: 'Ai Engineering Workshop',
-          social: [{ icon: 'external', label: 'Website', href: 'https://https://www.applydigital.com/' }],
+          social: [{ icon: 'github', label: 'Github', href: 'https://github.com/applydigital/ai-engineering' }],
+          components: {
+              Head: './src/components/starlight/Head.astro',
+              Footer: './src/components/starlight/Footer.astro',
+          },
           sidebar: [
               {
                   label: 'Claude + AWS Bedrock',
