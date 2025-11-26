@@ -27,14 +27,14 @@ This guide shows how to fix a bug with Claude.
 
 ### Step 2: Prompt Claude to fix the bug
 
-1. Open `useBidding.ts`
+1. Open `./sandbox/src/useBidding.ts`
 2. Open the Claude Extension and prompt Claude to fix it with the prompt below:
 
 ```
 This logic in `useBidding.ts` isn't working, could you fix this?
 ```
 
-3. You will be prompted before any edits are made, if Claude halucinantes or get it wrong this is also when you can intervene.
+3. You will be prompted before any edits are made, if Claude makes a mistake, this is when you can intervene.
 
 
 ### Step 3 (optional):
