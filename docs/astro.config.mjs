@@ -5,6 +5,8 @@ import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  site: 'https://applydigital.github.io',
+  base: '/ai-engineering',
   integrations: [
       starlight({
           title: 'Ai Engineering Workshop',
