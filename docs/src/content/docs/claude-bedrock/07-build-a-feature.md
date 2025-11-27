@@ -41,7 +41,7 @@ Requirements:
 > `Help me create an OpenSpec proposal to Implement a countdown timer feature that rotates the artwork....etc`
 
 
-3. Claude will proceed to generate a unique directory under `openspec/changes/` (e.g., openspec/changes/add-timer/). You will be required to approve and review as changes come through. At the end, Claude will generate three key files:
+3. Claude will proceed to generate a unique directory under `openspec/changes/` (e.g., `openspec/changes/add-timer/`). You will be required to approve and review as changes come through. At the end, Claude will generate three key files:
 
 - `proposal.md`: The business case and high-level scope.
 - `tasks.md`: The implementation checklist.
@@ -54,38 +54,50 @@ Requirements:
 Let's proceed to implement the changes
 ```
 
-2. As Claude proceeds through the tasks, you will be asked to read through and approve the changes and generated code. This is the primary shift with using Spec Driven Development, with enough Context and the right scope, you write less but direct and read more.
-    - Don't forget, you can always stop Claude and instruct it to adjust it's direction at any point
-
+2. As Claude iterates through the tasks, you will be asked to read through and approve the changes and generated code.
+    - You can always stop Claude and instruct it to adjust it's approach at any point
+    - If you find the code generated being completely offtrack from your expectations, you need to take a step back and revisit your specs.
 3. Go through the motion, take your time to review and observe how Claude and OpenSpec implements code.
 
 ### Step 3: Human Review
 
-1. Take a step back from Claude and do a smoke test on your own. 
-    - Usually at this point, we suggest spinning up the local environment and testing the new functionality by hand, but do your due dilligence as you see fit. 
+1. Take a step away from Claude and test the changes. 
+    - Usually at this point, we suggest spinning up the local environment and testing the new functionality by hand, but do your own due dilligence as you see fit. 
 
-2. Sometimes you'll discover intergration failures, lack of test coverage, or new side effects from reviewing the generated code. 
-    - At this point, you can choose to manually fix any bugs or instruct Claude to do so for you.
-    - One thing you should definitely consider though, is _why_ the bug slipped through. Claude and Ai Tools can hallucinate, but there is sometimes a deeper reason that is worth investigating. 
+### Step 4a: Making small Changes
+1. If the bugs/adjustments are trivial (i.e. the spec does not need to be modified), you can choose to manually fix it or instruct Claude to do so for you.
+    - e.g. the timer component is functional but aligned in the wrong direction.
 
- > ℹ️ During the development of this workshop, we found the Artwork rotation functionality sometimes was not invoked when the timer expired. We realized this was because there was no test to cover this side effect between hooks so Claude was unable to catch it when it was generating the code. Once test coverage was added, this bug ceased to occur. We've left the imperfect code here for you to experiment with. 
-
-
-### Step 4: Archive the Spec
-1. Once the feature is complete, we must archive it so Claude knows it can move on and remove it from it's context memory. 
+### Step 4b: Making Big Changes
+⚠️ If you notice the outputted functionality is completely off from your expectations, then your specs are probably inaccurate and you must go back and rectify it. You can choose to do so manually or with Claude but it is important that the `Spec` files are accurate as future work builds upon it. 
+1. Once you've made the changes, validate the new specs:
 ```
-openspec:archive {{ name of the spec we previously generated eg. "add-artwork-timer" }}
+openspec validate {{ name of the change eg. "add-artwork-timer" }} --strict
+```
+2. Once validated, go back to __Step 2__ and task Claude to implement the changes.
+
+ > ℹ️ These specs will become a codified source of truth in the next step, it is crucial to the entire process that these specs are comprehensive
+  
+### Step 5: Archive the Spec
+1. Once the feature is complete and deployed, we must archive it so Claude knows it can move on and remove it from it's context memory. 
+```
+openspec:archive {{ name of the change eg. "add-artwork-timer" }}
 ```
 
-2. Claude will take care of the rest from there. Usually there's little to intervention needed except some approvals to markdown file changes.
+2. Claude will validate that all the tasks are done . Usually there's little intervention needed except some approvals to markdown file changes.
 
-3. Congratulations, you're done!
+### Step 6: Making Future Changes
+1. If you need to make further changes at a later date (i.e. after it's archived),  simply go back to __Step 1__ and restart this process.
+2. The only thing you need to watch for is to make sure Claude is modifying the preexisting specs and not writing new ones unintentionally.
 
 ---
 ## Notes
 1. It is important to remember that as we continue to automate and delegate tasks to the Ai, our craftsmanship does not disappear. If anything, Ai allows us to generate sloppy code easier than ever. Rhe true value Engineers bring to the table is how we can effectively leverage our experience alongside these tools to better deliver quality code.
-2. Archiving is critical step in this process, once the code has been shipped, it allows Claude to reduce context clutter and furthermore, this gives a documentation trail behind the changes in the repo that can be picked up later if necessary.
-
+2. Archiving is critical step in this process, once all tasks have been completed and code has been shipped, it allows Claude to establish a source of truth and reduce context clutter. This gives a documentation trail behind the changes in the repo that can be picked up later if necessary.
+3. A good way to think about the various folders OpenSpec uses is:
+    - `/specs` are the present source of truth
+    - `/Changes/specs` are the future state that you might not enact 
+    - `/Chanes/archives` are the past
 
 ## Further Reading
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec/) Github
