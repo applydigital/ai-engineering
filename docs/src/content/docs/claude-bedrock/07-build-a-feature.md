@@ -46,7 +46,9 @@ Requirements:
 - `proposal.md`: The business case and high-level scope.
 - `tasks.md`: The implementation checklist.
 - `specs/`: The directory for requirement deltas.
+- `design.md`: The technical architecture and decisions. 
 
+> ℹ️ `Design.md` is an optional artifact. We recommend generating it for features that are reasonably complex to document the rationale, analyze alternatives, and ensure team alignment before implementation.
 
 ### Step 2: Implementation
 1. Tell Claude to implement the changes.
