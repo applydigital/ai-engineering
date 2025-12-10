@@ -28,7 +28,7 @@ This guide shows how to fix a bug with Claude.
 ### Step 2: Prompt Claude to fix the bug
 
 1. Open `./sandbox/src/useBidding.ts`
-2. Open the Claude Extension and prompt Claude to fix it with the prompt below:
+2. Initialize Claude and prompt Claude to fix it with the prompt below:
 
 ```
 This logic in `useBidding.ts` isn't working, could you fix this?

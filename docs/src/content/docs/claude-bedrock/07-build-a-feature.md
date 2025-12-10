@@ -12,7 +12,7 @@ This guide details the workflow for implementing a new software capability using
 
 ---
 
-> ℹ️ We've provided a [sandbox repo](https://github.com/applydigital/ai-engineering/tree/openspec/sandbox) that's already been initialized with Openspec. That being said, feel free to adapt the steps to a repo of your choosing as well. 
+> ℹ️ We've provided a [sandbox repo](https://github.com/applydigital/ai-engineering/tree/openspec/sandbox) with a branch that's already been initialized with Openspec. That being said, feel free to adapt the steps to a repo of your choosing as well. 
 
 ### Step 1. Scaffold the Change Proposal
 1. Initiate the OpenSpec workflow by using this command in Claude:
@@ -64,7 +64,7 @@ Let's proceed to implement the changes
 ### Step 3: Human Review
 
 1. Take a step away from Claude and test the changes. 
-    - Usually at this point, we suggest spinning up the local environment and testing the new functionality by hand, but do your own due dilligence as you see fit. 
+    - Usually at this point, we suggest spinning up the local environment and testing the new functionality by hand, but do your own due diligence as you see fit. 
 
 ### Step 4a: Making small Changes
 1. If the bugs/adjustments are trivial (i.e. the spec does not need to be modified), you can choose to manually fix it or instruct Claude to do so for you.
@@ -94,12 +94,12 @@ openspec:archive {{ name of the change eg. "add-artwork-timer" }}
 
 ---
 ## Notes
-1. It is important to remember that as we continue to automate and delegate tasks to the Ai, our craftsmanship does not disappear. If anything, Ai allows us to generate sloppy code easier than ever. Rhe true value Engineers bring to the table is how we can effectively leverage our experience alongside these tools to better deliver quality code.
+1. It is important to remember that as we continue to automate and delegate tasks to the Ai, our craftsmanship does not disappear. If anything, Ai allows us to generate sloppy code easier than ever. The true value Engineers bring to the table is how we can effectively leverage our experience alongside these tools to better deliver quality code.
 2. Archiving is critical step in this process, once all tasks have been completed and code has been shipped, it allows Claude to establish a source of truth and reduce context clutter. This gives a documentation trail behind the changes in the repo that can be picked up later if necessary.
 3. A good way to think about the various folders OpenSpec uses is:
     - `/specs` are the present source of truth
-    - `/Changes/specs` are the future state that you might not enact 
-    - `/Chanes/archives` are the past
+    - `/Changes/specs` are the future state that you might/might not enact 
+    - `/Changes/archives` are the past
 
 ## Further Reading
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec/) Github

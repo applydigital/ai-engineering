@@ -24,13 +24,18 @@ export default defineConfig({
               {
                   label: 'Claude + AWS Bedrock',
                   items: [
-                      { label: 'Claude Setup - VS Code', slug: 'claude-bedrock/01-claude-setup-vs-code' },
-                      { label: 'Claude Setup - Terminal', slug: 'claude-bedrock/02-claude-setup-terminal' },
+                      { label: 'Claude Setup - Terminal', slug: 'claude-bedrock/01-claude-setup-terminal' },
                       { label: 'Debug Exercise', slug: 'claude-bedrock/03-debugging-exercise'},
                       { label: 'Adding MCP', slug: 'claude-bedrock/04-adding-mcp'},
                       { label: 'Adding a Claude Hook', slug: 'claude-bedrock/05-add-a-claude-hook'},
                       { label: 'Install OpenSpec', slug: 'claude-bedrock/06-install-openspec'},
                       { label: 'Build a Feature', slug: 'claude-bedrock/07-build-a-feature'}
+                  ],
+              },
+              {
+                  label: 'Reference',
+                  items: [
+                      { label: 'Claude Setup - VS Code', slug: 'reference/claude-setup-vs-code' },
                   ],
               },
           ],

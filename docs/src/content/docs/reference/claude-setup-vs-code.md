@@ -1,7 +1,8 @@
 ---
 title: How to Connect Claude Code for VS Code Extension to AWS Bedrock
-description: A guide in my new Starlight docs site.
+description: This guide walks you through how to configure the official Anthropic Claude Code VS Code extension to use your secure AWS Bedrock endpoint.
 ---
+> ℹ️ The Claude VS code extension is still a little immature and lacks full support for all of Claude's features (e.g. MCP). This guide is here for your reference but we recommend interfacing with Claude code via the terminal.
 
 This guide walks you through how to configure the official Anthropic Claude Code VS Code extension to use your secure AWS Bedrock endpoint.
 
