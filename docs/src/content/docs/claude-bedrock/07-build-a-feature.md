@@ -12,7 +12,7 @@ This guide details the workflow for implementing a new software capability using
 
 ---
 
-> ℹ️ We've provided a [sandbox repo](https://github.com/applydigital/ai-engineering/tree/openspec/sandbox) that's already been initialized with Openspec. That being said, feel free to adapt the steps to a repo of your choosing as well. 
+> ℹ️ We've provided a [sandbox repo](https://github.com/applydigital/ai-engineering/tree/openspec/sandbox) with a branch that's already been initialized with Openspec. That being said, feel free to adapt the steps to a repo of your choosing as well. 
 
 ### Step 1. Scaffold the Change Proposal
 1. Initiate the OpenSpec workflow by using this command in Claude:
@@ -94,7 +94,7 @@ openspec:archive {{ name of the change eg. "add-artwork-timer" }}
 
 ---
 ## Notes
-1. It is important to remember that as we continue to automate and delegate tasks to the Ai, our craftsmanship does not disappear. If anything, Ai allows us to generate sloppy code easier than ever. Rhe true value Engineers bring to the table is how we can effectively leverage our experience alongside these tools to better deliver quality code.
+1. It is important to remember that as we continue to automate and delegate tasks to the Ai, our craftsmanship does not disappear. If anything, Ai allows us to generate sloppy code easier than ever. The true value Engineers bring to the table is how we can effectively leverage our experience alongside these tools to better deliver quality code.
 2. Archiving is critical step in this process, once all tasks have been completed and code has been shipped, it allows Claude to establish a source of truth and reduce context clutter. This gives a documentation trail behind the changes in the repo that can be picked up later if necessary.
 3. A good way to think about the various folders OpenSpec uses is:
     - `/specs` are the present source of truth
