@@ -22,6 +22,26 @@ export default defineConfig({
           },
           sidebar: [
               {
+                  label: 'BMAD',
+                  items: [
+                      { label: 'Index', slug: 'bmad/00-index' },
+                      { label: 'Level Zero Install - Technical', slug: 'bmad/00a-level-zero-install-technical' },
+                      { label: 'Level Zero Install - Non-Technical', slug: 'bmad/00b-level-zero-install-nontechnical' },
+                      { label: 'GitHub Team Collaboration', slug: 'bmad/00c-github-team-collaboration' },
+                      { label: 'Use Case and Project Context', slug: 'bmad/01-use-case-and-project-context' },
+                      { label: 'Discovery - Customer Experience Strategy', slug: 'bmad/02-discovery-customer-experience-strategy' },
+                      { label: 'Product Brief', slug: 'bmad/03-product-brief' },
+                      { label: 'Project Plan & Roadmap', slug: 'bmad/04-project-plan-roadmap' },
+                      { label: 'High Level User Story Map', slug: 'bmad/05-high-level-user-story-map' },
+                      { label: 'Information Architecture & Component Model', slug: 'bmad/06-information-architecture-component-model' },
+                      { label: 'PRD', slug: 'bmad/07-prd' },
+                      { label: 'Technical Architecture', slug: 'bmad/08-technical-architecture' },
+                      { label: 'Sprint Plan & Transition', slug: 'bmad/09-sprint-plan-transition' },
+                      { label: 'Dev Stories, Prototype & Tests', slug: 'bmad/10-dev-stories-prototype-tests' },
+                      { label: 'Status Report', slug: 'bmad/11-status-report' },
+                  ],
+              },
+              {
                   label: 'Claude + AWS Bedrock',
                   items: [
                       { label: 'Claude Setup - Terminal', slug: 'claude-bedrock/01-claude-setup-terminal' },
