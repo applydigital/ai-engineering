@@ -1,5 +1,5 @@
 ---
-title: Level Zero (0b): Non-Technical Installation Guide
+title: Level Zero (0b) - Non-Technical Installation Guide
 description: Get your computer ready to use BMAD with an AI assistant—GUI-focused installation for non-technical users.
 ---
 
