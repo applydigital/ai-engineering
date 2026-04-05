@@ -13,11 +13,11 @@ This guide details how to install the OpenSpec CLI and how to  configure it for 
 ---
 
 ### Step 1: Install OpenSpec
-1. Create a folder in your project directory for your project-level Claude hooks:
+1. Install OpenSpec with the following terminal command:
 ```bash
 npm install -g @fission-ai/openspec@latest
 ```
-2. Initialize OpenSpec with this command in the terminal:
+2. Next, initialize OpenSpec with this command:
 ```bash
 openspec init
 ```

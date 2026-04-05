@@ -34,17 +34,14 @@ This guide shows how to configure the terminal instance of Claude Code to use yo
 ```
 
 ### Step 3: Verify the Bedrock Connection
-1. Reload or restart VS Code to apply the new settings.
-2. Open the Claude Code panel from the Activity Bar (it's usually under the "Anthropic" icon).
-3. The chat window should open without asking for an API key or login.
-4. In the chat input, type "Hello" and press Enter.
+1. Reload or restart the terminal to apply the new settings.
+2. Initilize Claude Code with the command `claude`
+3. Claude Code should initialize without asking for an API key or login.
+4. In the chat input, use the command "/Status" to validate your connected to AWS Bedrock. It should look something like this:
 ![claude successfully configured in the terminal](../../../assets/terminal-claude.png)
+4. Finally, press `esc` to revert back to the chat interface. Try a prompt out to validated the connection. 
 
-
-
-If you get a response, you are successfully connected. The extension is now using your local AWS credentials to send all requests securely to your Bedrock endpoint.
-
-
+If you get a response, you are successfully connected. Claude is now using your local AWS credentials to send all requests securely to your AWS Bedrock endpoint.
 
 ---
 ## Further Reading
