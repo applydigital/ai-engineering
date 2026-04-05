@@ -2,6 +2,10 @@
   "name": "sandbox-mobile",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=20.19.5",
+    "npm": ">=10.8.2"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
