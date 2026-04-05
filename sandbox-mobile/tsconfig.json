@@ -4,6 +4,9 @@
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react-native",
+    "types": [
+      "jest"
+    ],
     "paths": {
       "@/*": [
         "./*"

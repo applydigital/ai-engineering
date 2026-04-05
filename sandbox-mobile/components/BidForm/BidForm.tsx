@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Button } from './ui/Button';
-import { NumberField } from './ui/NumberField';
+import { Button } from '../ui/Button';
+import { NumberField } from '../ui/NumberField';
 
 interface BidFormProps {
   onSubmit: (bid: number) => void;
@@ -74,5 +74,3 @@ export const BidForm = ({ onSubmit, minBid }: BidFormProps) => {
     </View>
   );
 };
-
-

@@ -4,7 +4,7 @@ export const useBidding = (initialBid: number = 100) => {
   const [currentBid, setCurrentBid] = useState(initialBid);
 
   const submitBid = (bid: number) => {
-    if (bid < currentBid) {
+    if (bid > currentBid) {
       setCurrentBid(bid);
     }
   };
