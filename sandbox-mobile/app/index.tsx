@@ -25,7 +25,7 @@ export default function HomeScreen() {
         <ArtworkImage src={currentImage.src} alt={currentImage.alt} />
         <View style={styles.bidSection}>
           <BidTicker bid={currentBid} />
-          <BidForm onSubmit={(bid) => submitBid(bid)} minBid={minBid} />
+          <BidForm onSubmit={submitBid} minBid={minBid} />
         </View>
       </ScrollView>
     </View>
