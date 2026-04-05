@@ -1,5 +1,5 @@
 ---
-title: Level Zero (0a): Technical Installation Guide
+title: Installation Guide
 description: Install Node.js, Git, and an AI IDE via command line for technical users and engineers.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Use Case: Apply Digital Website Redesign
+title: Use Case - Apply Digital Website Redesign
 description: The end-to-end scenario running through every tutorial—a real-world website redesign engagement with full project context.
 ---
 

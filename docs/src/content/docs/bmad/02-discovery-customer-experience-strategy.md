@@ -1,5 +1,5 @@
 ---
-title: Discovery: Opportunity Identification, Digital Growth Strategy & Conceptual Design
+title: Discovery - Opportunity Identification, Digital Growth Strategy & Conceptual Design
 description: Build the strategic foundation with opportunity identification, growth strategy, and conceptual design for executable roadmaps.
 ---
 
