@@ -23,7 +23,7 @@ export const NumberField = ({
       value={value}
       onChangeText={onChangeText}
       placeholder={placeholder}
-      placeholderTextColor="rgba(156, 163, 175, 0.9)"
+      placeholderTextColor="rgba(0, 0, 0, 0.75)"
       keyboardType="numeric"
     />
     <View style={styles.errorContainer}>
