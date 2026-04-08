@@ -17,7 +17,7 @@ This guide details the workflow for implementing a new software capability using
 ### Step 1. Scaffold the Change Proposal
 1. Initiate the OpenSpec workflow by using this command in Claude:
 ```
-openspec:proposal
+/opsx:propose
 ```
 
 2. OpenSpec will kick in and prompt you to describe the functionality so it can create the spec artifacts. For this guide, let's add a timer feature to this app:
@@ -26,19 +26,16 @@ openspec:proposal
 Task: Implement a countdown timer feature that rotates artwork.
 
 New Components:
-1.  AtTimer (Atom): A display component showing the remaining time (mm:ss).
-2.  MlBidInfo (Molecule): A wrapper component that composes the existing AtBidTicker atom and the new AtTimer atom.
+1.  Timer: A foundational display component showing the remaining time (mm:ss).
+2.  BidInfo: A wrapper component that composes the existing BidTicker and Timer components.
 3.  useArtworkTimer() (Custom Hook): Manages the countdown logic.
 
 Requirements:
 - Logic: The timer should countdown from 60 seconds. When it hits 0, it must trigger an action to change the current artwork and reset the timer automatically.
 - The Hook: Should return the current time remaining and a reset function.
-- The Molecule: `BidInfo` should accept props necessary to pass down to `BidTicker` and `Timer`.
+- `BidInfo` should accept props necessary to pass down to `BidTicker` and `Timer`.
 ```
 > 💡 Note how the above prompt essentially replicates a well written Jira Ticket. With the Atlassian MCP, it's possible to skip this step entirely and generate a spec off a Jira ticket.
-
-> ℹ️ Alternatively, you can combine both steps into one prompt: 
-> `Help me create an OpenSpec proposal to Implement a countdown timer feature that rotates the artwork....etc`
 
 
 3. Claude will proceed to generate a unique directory under `openspec/changes/` (e.g., `openspec/changes/add-timer/`). You will be required to approve and review as changes come through. At the end, Claude will generate three key files:
@@ -48,12 +45,11 @@ Requirements:
 - `specs/`: The directory for requirement deltas.
 - `design.md`: The technical architecture and decisions. 
 
-> ℹ️ `Design.md` is an optional artifact. We recommend generating it for features that are reasonably complex to document the rationale, analyze alternatives, and ensure team alignment before implementation.
 
 ### Step 2: Implementation
 1. Tell Claude to implement the changes.
 ```
-Let's proceed to implement the changes
+/opsx:apply
 ```
 
 2. As Claude iterates through the tasks, you will be asked to read through and approve the changes and generated code.
@@ -67,14 +63,14 @@ Let's proceed to implement the changes
     - Usually at this point, we suggest spinning up the local environment and testing the new functionality by hand, but do your own due diligence as you see fit. 
 
 ### Step 4a: Making small Changes
-1. If the bugs/adjustments are trivial (i.e. the spec does not need to be modified), you can choose to manually fix it or instruct Claude to do so for you.
+1. If the bugs/adjustments are trivial (i.e. the spec does not need to be modified), you can instruct Claude to do so for you.
     - e.g. the timer component is functional but aligned in the wrong direction.
 
 ### Step 4b: Making Big Changes
 ⚠️ If you notice the outputted functionality is completely off from your expectations, then your specs are probably inaccurate and you must go back and rectify it. You can choose to do so manually or with Claude but it is important that the `Spec` files are accurate as future work builds upon it. 
 1. Once you've made the changes, validate the new specs:
 ```
-openspec validate {{ name of the change eg. "add-artwork-timer" }} --strict
+/opsx:verify
 ```
 2. Once validated, go back to __Step 2__ and task Claude to implement the changes.
 
@@ -83,10 +79,10 @@ openspec validate {{ name of the change eg. "add-artwork-timer" }} --strict
 ### Step 5: Archive the Spec
 1. Once the feature is complete and deployed, we must archive it so Claude knows it can move on and remove it from it's context memory. 
 ```
-openspec:archive {{ name of the change eg. "add-artwork-timer" }}
+/opsx:archive
 ```
 
-2. Claude will validate that all the tasks are done . Usually there's little intervention needed except some approvals to markdown file changes.
+2. Claude will validate that all the tasks are done. Usually there's little intervention needed here if every task was completed
 
 ### Step 6: Making Future Changes
 1. If you need to make further changes at a later date (i.e. after it's archived),  simply go back to __Step 1__ and restart this process.

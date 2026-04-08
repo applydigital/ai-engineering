@@ -51,8 +51,7 @@ exec( `say "${message}"`, (error) => {
         "hooks": [
           {
             "type": "command",
-            "command":
-			\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/notify-finished.js"
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/notify-finished.js\""
           }
         ]
       }
