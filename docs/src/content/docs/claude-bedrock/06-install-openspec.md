@@ -25,24 +25,23 @@ openspec init
       - Select AI Tool: Choose Claude Code.
       - Confirm: Accept default paths for now (don't worry, you can change these later)
 
-This generates an `./openspec` directory containing `AGENTS.md` (the protocol) and `project.md` (project context). Note that at the project root level, `AGENTS.md` and `CLAUDE.md` have also been generated and overwritten to redirect to those two files.
+This generates an `./openspec` directory containing `config.yaml`. This yaml file is where you can introduce product context. 
 
-### Step 2: Analyze and Understand the generated files
+> ℹ️ The default setup installs the 4 `core` commands: explore, propose, apply, archive. 
+> To enable expanded workflow commands, run `openspec config profile` in your terminal and select `workflows` to add additional commands..
 
-Take a read through `./openspec/AGENTS.md` and `./openspec/project.md` and assess how you'd personally modify/author these files to suite the delivery needs and style of your squad. 
- 
-When ready, take a moment to share your thoughts with your peers.
+### Step 2: Understanding project context
 
-`project.md` is the technical context of the project (tech stack, patterns, ways of working ) while `AGENTS.md` directs the persona and approach Claude should apply. This is the global context we provide to Claude that enables it to execute with better accuracy.
+Take a read through this [doc](https://github.com/Fission-AI/OpenSpec/blob/main/docs/customization.md) on customization. Particularly on Project Configuration where it explains how `config.yaml` allows to you to add context like tech stack. Additionally, you're also able to 'configure' how Openspec behaves when it executes its commands so it gives you ability to customize the planning and development approach. 
+
+When ready, take a moment to disuss with your peers what you'd consider important to add to `config.yaml`.
 
 In the next few workshops, we'll be using the OpenSpec Workflow to perform some common development tasks.
 
 ---
 ## Notes
 - The main approach we're using building towards is Spec Driven Development. While it requires an non-trivial amount of reading and context setting/writing to setup it fundamentally changes the way we work with Ai tools.
-- Spec Driven Development pairs really well with Test Driven Development. Task Claude to scaffold the tests first and review that before proceeding to generate any code. To modify OpenSpec to follow TDD, simply add the direction to follow TDD in the following files/sections:
-      1. `openspec/Agents.md` - implementation workflow and tasks.md template sections
-      2. `openspec/project.md` - testing strategy section
+- Spec Driven Development pairs really well with Test Driven Development. Task Claude to scaffold the tests first and review that before proceeding to generate any code. To modify OpenSpec to follow TDD, simply add the direction to follow TDD in `openspec/config.yaml`
 - This is an evolving area and there are also other contemporary approaches like BMAD and Spec-Kit which approach spec driven development slightly differently. We encourage you to explore these options as well to compare approaches.
 
 
