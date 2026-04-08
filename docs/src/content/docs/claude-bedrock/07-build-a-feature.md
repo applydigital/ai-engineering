@@ -17,7 +17,7 @@ This guide details the workflow for implementing a new software capability using
 ### Step 1. Scaffold the Change Proposal
 1. Initiate the OpenSpec workflow by using this command in Claude:
 ```
-opsx:propose
+/opsx:propose
 ```
 
 2. OpenSpec will kick in and prompt you to describe the functionality so it can create the spec artifacts. For this guide, let's add a timer feature to this app:
@@ -70,7 +70,7 @@ Requirements:
 ⚠️ If you notice the outputted functionality is completely off from your expectations, then your specs are probably inaccurate and you must go back and rectify it. You can choose to do so manually or with Claude but it is important that the `Spec` files are accurate as future work builds upon it. 
 1. Once you've made the changes, validate the new specs:
 ```
-opsx:verify
+/opsx:verify
 ```
 2. Once validated, go back to __Step 2__ and task Claude to implement the changes.
 
@@ -79,7 +79,7 @@ opsx:verify
 ### Step 5: Archive the Spec
 1. Once the feature is complete and deployed, we must archive it so Claude knows it can move on and remove it from it's context memory. 
 ```
-opsx:archive
+/opsx:archive
 ```
 
 2. Claude will validate that all the tasks are done. Usually there's little intervention needed here if every task was completed
