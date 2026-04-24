@@ -27,13 +27,12 @@ touch .claude/hooks/notify-finished.js
 ```javascript
 // .claude/hooks/notify-finished.js
 
-const { exec } = require('child_process');
+import { exec } from 'child_process';
 
 const message = "Claude task complete";
 
-exec( `say "${message}"`, (error) => {
+exec(`say "${message}"`, (error) => {
   if (error) {
-    // Log errors to console
     console.error("error executing Claude stop hook: notify finished");
   }
 });
