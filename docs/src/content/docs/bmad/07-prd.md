@@ -3,12 +3,10 @@ title: Product Requirements Document (PRD)
 description: The single source of truth for functional and non-functional requirements, acceptance criteria, and scope for the solution.
 ---
 
-# Tutorial: Product Requirements Document (PRD)
-
-> **Track:** Non-Technical
-> **Audience:** Product Managers, Design Leads, Tech Leads
-> **Time:** ~45 minutes
-> **Blueprint Deliverable:** 314 — Product Requirements Document (Cornerstone)
+> **Track:** Non-Technical\
+> **Audience:** Product Managers, Design Leads, Tech Leads\
+> **Time:** ~45 minutes\
+> **Blueprint Deliverable:** 314 — Product Requirements Document (Cornerstone)\
 > **Prerequisites:** Tutorial 03 (Product Brief), Tutorial 05 (High-Level User Story Map), Tutorial 06 (IA & Component Model)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

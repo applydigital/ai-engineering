@@ -3,12 +3,10 @@ title: Product Brief
 description: Create a cornerstone document that bridges discovery and delivery, defining what you're building and how you'll know it works.
 ---
 
-# Tutorial: Product Brief
-
-> **Track:** Non-Technical
-> **Audience:** Strategists, Product Managers, Design Leads
-> **Time:** ~45 minutes
-> **Blueprint Deliverable:** 301 — Product Brief (Cornerstone)
+> **Track:** Non-Technical\
+> **Audience:** Strategists, Product Managers, Design Leads\
+> **Time:** ~45 minutes\
+> **Blueprint Deliverable:** 301 — Product Brief (Cornerstone)\
 > **Prerequisite:** Tutorial 02 (Opportunity Identification, Digital Growth Strategy & Conceptual Design)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

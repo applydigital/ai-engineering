@@ -3,12 +3,10 @@ title: Sprint Planning & Story Preparation
 description: Transition from planning to implementation by generating sprint trackers and preparing stories with full developer context.
 ---
 
-# Tutorial: Sprint Planning & Story Preparation
-
-> **Track:** Technical / Hands-On
-> **Audience:** Developers, Tech Leads, Scrum Masters
-> **Time:** ~30 minutes
-> **Blueprint Deliverable:** 401 — Detailed User Story Backlog
+> **Track:** Technical / Hands-On\
+> **Audience:** Developers, Tech Leads, Scrum Masters\
+> **Time:** ~30 minutes\
+> **Blueprint Deliverable:** 401 — Detailed User Story Backlog\
 > **Prerequisites:** Tutorial 07 (PRD), Tutorial 08 (Technical Architecture), completed epics and stories in `_bmad-output/`
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

@@ -3,12 +3,10 @@ title: Technical Architecture Document
 description: Translate product requirements into a comprehensive system design covering architecture, data models, integrations, and infrastructure.
 ---
 
-# Tutorial: Technical Architecture Document
-
-> **Track:** Technical
-> **Audience:** Tech Leads, Architects, Senior Engineers
-> **Time:** ~45 minutes
-> **Blueprint Deliverable:** 304 — Technical Architecture Document (Cornerstone)
+> **Track:** Technical\
+> **Audience:** Tech Leads, Architects, Senior Engineers\
+> **Time:** ~45 minutes\
+> **Blueprint Deliverable:** 304 — Technical Architecture Document (Cornerstone)\
 > **Prerequisites:** Tutorial 05 (High-Level User Story Map), Tutorial 07 (PRD)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

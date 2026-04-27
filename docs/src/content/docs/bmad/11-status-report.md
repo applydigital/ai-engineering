@@ -3,12 +3,10 @@ title: Status Report
 description: Produce recurring status reports that provide ongoing visibility into progress, risks, and upcoming work for stakeholder alignment.
 ---
 
-# Tutorial: Status Report
-
-> **Track:** Non-Technical
-> **Audience:** Project Managers, Delivery Leads, Scrum Masters
-> **Time:** ~20 minutes
-> **Blueprint Deliverable:** 107 — Status Report
+> **Track:** Non-Technical\
+> **Audience:** Project Managers, Delivery Leads, Scrum Masters\
+> **Time:** ~20 minutes\
+> **Blueprint Deliverable:** 107 — Status Report\
 > **Prerequisites:** Tutorial 09 (Sprint Planning) — you need a `sprint-status.yaml` and at least one completed story
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

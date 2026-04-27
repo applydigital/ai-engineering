@@ -3,11 +3,9 @@ title: Installation Guide
 description: Install Node.js, Git, and an AI IDE via command line for technical users and engineers.
 ---
 
-# Level Zero (0a): Technical Installation Guide
-
-> **Type:** Installation Guide (Technical)
-> **Audience:** Engineers and technical users
-> **Time:** 20–45 minutes
+> **Type:** Installation Guide (Technical)\
+> **Audience:** Engineers and technical users\
+> **Time:** 20–45 minutes\
 > **Goal:** Install Node.js, Git, and an AI IDE via command line and get BMAD running
 
 ---
