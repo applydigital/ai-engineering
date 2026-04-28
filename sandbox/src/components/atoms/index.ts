@@ -1,6 +1,9 @@
 export type { AtBidTickerProps } from "./AtBidTicker";
 export { AtBidTicker } from "./AtBidTicker";
 
+export type { AtTimerProps } from "./AtTimer";
+export { AtTimer } from "./AtTimer";
+
 export type { AtButtonProps } from "./AtButton";
 export { AtButton } from "./AtButton";
 

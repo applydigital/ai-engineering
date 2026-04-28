@@ -3,13 +3,24 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ArtworkImage } from '@/components/ArtworkImage';
 import { BidForm } from '@/components/BidForm';
-import { BidTicker } from '@/components/BidTicker';
+import { BidInfo } from '@/components/BidInfo';
 import { artImages } from '@/data/artImages';
 import { useBidding } from '@/hooks/useBidding';
-import { useRandomArt } from '@/hooks/useRandomArt';
+import { useArtworkTimer } from '@/hooks/useArtworkTimer';
+import { useState, useCallback } from 'react';
 
 export default function HomeScreen() {
-  const currentImage = useRandomArt(artImages);
+  const [currentImage, setCurrentImage] = useState(() => {
+    const idx = Math.floor(Math.random() * artImages.length);
+    return artImages[idx];
+  });
+
+  const rotateArtwork = useCallback(() => {
+    const idx = Math.floor(Math.random() * artImages.length);
+    setCurrentImage(artImages[idx]);
+  }, []);
+
+  const { timeRemaining } = useArtworkTimer(rotateArtwork);
   const { currentBid, submitBid, minBid } = useBidding(100);
   const insets = useSafeAreaInsets();
 
@@ -24,7 +35,7 @@ export default function HomeScreen() {
       >
         <ArtworkImage src={currentImage.src} alt={currentImage.alt} />
         <View style={styles.bidSection}>
-          <BidTicker bid={currentBid} />
+          <BidInfo bid={currentBid} timeRemaining={timeRemaining} />
           <BidForm onSubmit={submitBid} minBid={minBid} />
         </View>
       </ScrollView>
