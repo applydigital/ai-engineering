@@ -3,12 +3,10 @@ title: Discovery - Opportunity Identification, Digital Growth Strategy & Concept
 description: Build the strategic foundation with opportunity identification, growth strategy, and conceptual design for executable roadmaps.
 ---
 
-# Tutorial: Opportunity Identification, Digital Growth Strategy & Conceptual Design
-
-> **Track:** Non-Technical
-> **Audience:** Strategists, Product Managers, UX Leads, Design Leads
-> **Time:** ~45 minutes
-> **Blueprint Deliverables:** 201 — Opportunity Identification, 202 — Digital Growth Strategy, 203 — Conceptual Design
+> **Track:** Non-Technical\
+> **Audience:** Strategists, Product Managers, UX Leads, Design Leads\
+> **Time:** ~45 minutes\
+> **Blueprint Deliverables:** 201 — Opportunity Identification, 202 — Digital Growth Strategy, 203 — Conceptual Design\
 > **Prerequisite:** Tutorial 01 (read the Apply Digital use case and project context)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

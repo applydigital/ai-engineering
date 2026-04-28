@@ -3,12 +3,10 @@ title: Information Architecture & Component Model
 description: Execute the full UX design workflow—from trigger mapping through opportunity scoping, wireframes, and component inventories.
 ---
 
-# Tutorial 06: UX Discovery — From Trigger Mapping to Wireframes & Components
-
-> **Track:** Non-Technical
-> **Audience:** UX Designers, Design Leads, Product Managers
-> **Time:** ~90 minutes
-> **Blueprint Deliverables:** 302 — Information Architecture (Cornerstone), 306 — Component Library
+> **Track:** Non-Technical\
+> **Audience:** UX Designers, Design Leads, Product Managers\
+> **Time:** ~90 minutes\
+> **Blueprint Deliverables:** 302 — Information Architecture (Cornerstone), 306 — Component Library\
 > **Prerequisites:** Tutorial 03 (Product Brief), Tutorial 05 (High-Level User Story Map)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

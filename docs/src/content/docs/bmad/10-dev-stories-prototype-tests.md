@@ -3,12 +3,10 @@ title: Dev Story Cycle - Implement, Review, Iterate
 description: Execute the implementation cycle—implement stories, conduct code reviews, iterate on findings, and generate automated E2E tests.
 ---
 
-# Tutorial: Dev Story Cycle — Implement, Review, Iterate
-
-> **Track:** Technical / Hands-On
-> **Audience:** Developers, Tech Leads
-> **Time:** ~60 minutes
-> **Blueprint Deliverable:** 402 — Solution Implementation
+> **Track:** Technical / Hands-On\
+> **Audience:** Developers, Tech Leads\
+> **Time:** ~60 minutes\
+> **Blueprint Deliverable:** 402 — Solution Implementation\
 > **Prerequisites:** Tutorial 09 (Sprint Planning & Story Preparation) — you need stories at `ready-for-dev` status
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

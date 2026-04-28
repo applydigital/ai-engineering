@@ -3,12 +3,10 @@ title: High-Level User Story Map
 description: Create a structured outline of functional requirements, linking the Product Brief to detailed PRDs and implementation plans.
 ---
 
-# Tutorial: High-Level User Story Map
-
-> **Track:** Non-Technical
-> **Audience:** Product Managers, UX Designers, Tech Leads, Strategists
-> **Time:** ~30 minutes
-> **Blueprint Deliverable:** 303 — High-Level User Story Map
+> **Track:** Non-Technical\
+> **Audience:** Product Managers, UX Designers, Tech Leads, Strategists\
+> **Time:** ~30 minutes\
+> **Blueprint Deliverable:** 303 — High-Level User Story Map\
 > **Prerequisites:** Tutorial 03 (Product Brief)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

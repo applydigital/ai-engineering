@@ -3,12 +3,10 @@ title: Strategic Initiative Roadmap
 description: Translate your digital growth strategy into a time-bound, executive-ready plan showing what gets built when and why.
 ---
 
-# Tutorial: Strategic Initiative Roadmap
-
-> **Track:** Non-Technical
-> **Audience:** Product Managers, Strategists, Account Leads
-> **Time:** ~30 minutes
-> **Blueprint Deliverable:** 204 — Strategic Initiative Roadmap
+> **Track:** Non-Technical\
+> **Audience:** Product Managers, Strategists, Account Leads\
+> **Time:** ~30 minutes\
+> **Blueprint Deliverable:** 204 — Strategic Initiative Roadmap\
 > **Prerequisites:** Tutorial 02 (Digital Growth Strategy) and Tutorial 03 (Product Brief)
 
 See the [Experience Delivery Blueprint](https://underground.applydigital.io) for full deliverable definitions.

@@ -3,8 +3,6 @@ title: BMAD Tutorials Index
 description: The complete guide to following the BMAD training path with the Apply Digital website redesign use case.
 ---
 
-# BMAD Tutorials Index
-
 Use this guide to follow the BMAD training path. Start at the top and proceed in numeric order.
 
 > **Use Case:** All tutorials use the Apply Digital website redesign as a running example. See `01-use-case-and-project-context.md` for the full project context — $500K budget, 6-month timeline, Next.js + Contentful + Vercel.

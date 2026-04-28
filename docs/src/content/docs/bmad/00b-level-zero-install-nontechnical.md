@@ -3,11 +3,9 @@ title: Level Zero (0b) - Non-Technical Installation Guide
 description: Get your computer ready to use BMAD with an AI assistant—GUI-focused installation for non-technical users.
 ---
 
-# Level Zero (0b): Non-Technical Installation Guide
-
-> **Type:** Installation Guide (Non-technical)
-> **Audience:** Non-technical users — strategists, product managers, designers, and anyone who doesn't write code day-to-day
-> **Time:** 30–60 minutes (mostly waiting for downloads)
+> **Type:** Installation Guide (Non-technical)\
+> **Audience:** Non-technical users — strategists, product managers, designers, and anyone who doesn't write code day-to-day\
+> **Time:** 30–60 minutes (mostly waiting for downloads)\
 > **Goal:** Get your computer ready to use BMAD with an AI assistant
 
 ---

@@ -3,11 +3,9 @@ title: GitHub Team Collaboration & Code Organization
 description: Git and GitHub practices for multi-person BMAD teams to share context, branch work, and merge AI-generated outputs.
 ---
 
-# Tutorial 00c: GitHub Team Collaboration & Code Organization
-
-> **Track:** All roles
-> **Audience:** All team members working on a shared BMAD project
-> **Time:** ~30 minutes
+> **Track:** All roles\
+> **Audience:** All team members working on a shared BMAD project\
+> **Time:** ~30 minutes\
 > **Prerequisites:** Tutorial 00a or 00b (Install)
 
 ---
@@ -84,14 +82,14 @@ apply-digital-redesign/
 
 The repo is the **shared working memory** for both the team and their AI agents. Everything important goes here:
 
-| Content type | Where it goes |
-| --- | --- |
-| BMAD workflow outputs (briefs, PRDs, specs) | `_bmad-output/` |
-| User stories | `_bmad/stories/active/` or `backlog/` |
-| Architecture decisions | `_bmad/context/architecture.md` |
-| Meeting notes and decisions | `docs/meetings/` |
-| Design exports (Excalidraw, Figma exports) | `_bmad-output/` |
-| Source code | `src/` |
+| Content type                                | Where it goes                         |
+| ------------------------------------------- | ------------------------------------- |
+| BMAD workflow outputs (briefs, PRDs, specs) | `_bmad-output/`                       |
+| User stories                                | `_bmad/stories/active/` or `backlog/` |
+| Architecture decisions                      | `_bmad/context/architecture.md`       |
+| Meeting notes and decisions                 | `docs/meetings/`                      |
+| Design exports (Excalidraw, Figma exports)  | `_bmad-output/`                       |
+| Source code                                 | `src/`                                |
 
 > **Key rule:** Never rely on private chat history for important decisions or context. If it matters to the project, it belongs in the repo.
 
@@ -145,14 +143,14 @@ with the architecture defined in _bmad/context/architecture.md.
 
 ### Branch Types
 
-| Branch | Pattern | Purpose |
-| --- | --- | --- |
-| `main` | `main` | Production-ready. Protected — no direct commits. |
-| `develop` | `develop` | Integration branch. All story work merges here. |
-| `story/*` | `story/S{n}-{slug}` | One branch per BMAD story. This is where AI agents work. |
-| `fix/*` | `fix/{issue}-{slug}` | Bug fixes outside of stories. |
-| `chore/*` | `chore/{description}` | Tooling, context updates, housekeeping. |
-| `experiment/*` | `experiment/{description}` | Exploratory work — never merges to `develop` directly. |
+| Branch         | Pattern                    | Purpose                                                  |
+| -------------- | -------------------------- | -------------------------------------------------------- |
+| `main`         | `main`                     | Production-ready. Protected — no direct commits.         |
+| `develop`      | `develop`                  | Integration branch. All story work merges here.          |
+| `story/*`      | `story/S{n}-{slug}`        | One branch per BMAD story. This is where AI agents work. |
+| `fix/*`        | `fix/{issue}-{slug}`       | Bug fixes outside of stories.                            |
+| `chore/*`      | `chore/{description}`      | Tooling, context updates, housekeeping.                  |
+| `experiment/*` | `experiment/{description}` | Exploratory work — never merges to `develop` directly.   |
 
 ### Branch Naming
 
@@ -208,16 +206,16 @@ docs(prd): add acceptance criteria for case study filtering
 
 ### Commit Types
 
-| Type | When to use |
-| --- | --- |
-| `feat` | New feature or story acceptance criterion met |
-| `fix` | Bug fix |
-| `bmad` | BMAD-specific: agent updates, story moves, context changes in `_bmad/` |
-| `docs` | Documentation-only changes (including `_bmad-output/` updates) |
-| `refactor` | Code restructure with no behavior change |
-| `test` | Adding or correcting tests |
-| `chore` | Tooling, dependencies, configuration |
-| `wip` | Work in progress — **squash before merging**, never use on final commits |
+| Type       | When to use                                                              |
+| ---------- | ------------------------------------------------------------------------ |
+| `feat`     | New feature or story acceptance criterion met                            |
+| `fix`      | Bug fix                                                                  |
+| `bmad`     | BMAD-specific: agent updates, story moves, context changes in `_bmad/`   |
+| `docs`     | Documentation-only changes (including `_bmad-output/` updates)           |
+| `refactor` | Code restructure with no behavior change                                 |
+| `test`     | Adding or correcting tests                                               |
+| `chore`    | Tooling, dependencies, configuration                                     |
+| `wip`      | Work in progress — **squash before merging**, never use on final commits |
 
 ### BMAD Footer (for significant AI decisions)
 
@@ -243,12 +241,12 @@ BMAD-Reviewed-By: your.name@applydigital.com
 
 Each BMAD story has exactly one **Story Owner** — the human developer responsible for that branch. AI agents assist the Story Owner but are never owners themselves.
 
-| Role | Responsibility |
-| --- | --- |
-| **Story Owner** | Drives the story branch, makes final code decisions, opens the PR |
-| **Reviewer 1** | Reviews code quality, tests, and alignment with `architecture.md` |
-| **Reviewer 2** | Reviews BMAD context files and verifies story acceptance criteria are met |
-| **AI Agent** | Generates code, refactors, writes tests — always under human oversight |
+| Role            | Responsibility                                                            |
+| --------------- | ------------------------------------------------------------------------- |
+| **Story Owner** | Drives the story branch, makes final code decisions, opens the PR         |
+| **Reviewer 1**  | Reviews code quality, tests, and alignment with `architecture.md`         |
+| **Reviewer 2**  | Reviews BMAD context files and verifies story acceptance criteria are met |
+| **AI Agent**    | Generates code, refactors, writes tests — always under human oversight    |
 
 > One person cannot be both Story Owner and sole reviewer. Every PR needs at least one human reviewer who didn't write the code.
 
@@ -328,11 +326,11 @@ Save this as `.github/PULL_REQUEST_TEMPLATE.md` in the repo:
 
 ### Merge Strategy
 
-| Scenario | Strategy |
-| --- | --- |
+| Scenario                 | Strategy                                        |
+| ------------------------ | ----------------------------------------------- |
 | Story branch → `develop` | **Squash & merge** — one clean commit per story |
-| `develop` → `main` | **Merge commit** — preserves develop history |
-| Never use | Rebase & merge — loses BMAD footer metadata |
+| `develop` → `main`       | **Merge commit** — preserves develop history    |
+| Never use                | Rebase & merge — loses BMAD footer metadata     |
 
 After squash-merging a story, move the story file from `_bmad/stories/active/` to `_bmad/stories/completed/` in a follow-up chore commit.
 
@@ -342,13 +340,13 @@ AI-generated code requires the same review rigour as human-written code — in s
 
 **What every reviewer must check:**
 
-| Area | What to look for |
-| --- | --- |
-| **Functionality** | Does the code correctly implement every story AC? |
-| **AI code quality** | Hallucinated APIs, over-engineered solutions, subtle logic errors, tests that always pass |
-| **Context integrity** | Do the `_bmad/context/` changes accurately reflect what was actually built? |
-| **Architecture alignment** | Does the implementation match `architecture.md`? If not, was a new ADR added? |
-| **Test coverage** | Are tests meaningful, or did the AI write tests that always pass? |
+| Area                       | What to look for                                                                          |
+| -------------------------- | ----------------------------------------------------------------------------------------- |
+| **Functionality**          | Does the code correctly implement every story AC?                                         |
+| **AI code quality**        | Hallucinated APIs, over-engineered solutions, subtle logic errors, tests that always pass |
+| **Context integrity**      | Do the `_bmad/context/` changes accurately reflect what was actually built?               |
+| **Architecture alignment** | Does the implementation match `architecture.md`? If not, was a new ADR added?             |
+| **Test coverage**          | Are tests meaningful, or did the AI write tests that always pass?                         |
 
 **Useful review prompts for Claude Code:**
 - *"Audit **`services-page.tsx`** for correctness and alignment with our architecture"*
@@ -363,12 +361,12 @@ AI-generated code requires the same review rigour as human-written code — in s
 
 `.bmad/` and `_bmad-output/` files need careful handling during merges — these are context documents, not code, and auto-resolving them can corrupt the shared project understanding.
 
-| File type | Risk | Who resolves |
-| --- | --- | --- |
-| `src/` code | Low–medium | Story owner + AI assist |
-| `_bmad/context/` | **High** | Story owner + team lead |
-| `_bmad-output/` deliverables | Medium | Story owner (their version wins) |
-| `_bmad/stories/` | Medium | Story owner |
+| File type                    | Risk       | Who resolves                     |
+| ---------------------------- | ---------- | -------------------------------- |
+| `src/` code                  | Low–medium | Story owner + AI assist          |
+| `_bmad/context/`             | **High**   | Story owner + team lead          |
+| `_bmad-output/` deliverables | Medium     | Story owner (their version wins) |
+| `_bmad/stories/`             | Medium     | Story owner                      |
 
 **Rules:**
 1. Do not blindly auto-merge context or deliverable `.md` files
@@ -473,13 +471,13 @@ git remote prune origin
 
 ### Troubleshooting
 
-| Symptom | Likely cause | Fix |
-| --- | --- | --- |
-| Agent ignores architecture decisions | Context not loaded at session start | Reference `architecture.md` explicitly at session start |
-| Frequent `_bmad/context/` conflicts | Uncoordinated edits by multiple people | Coordinate via GitHub Issues before editing shared context |
-| AI makes decisions already decided | Stale context in session | Pull latest `develop`, reload context files |
-| Committed sensitive data | Missing `.gitignore` rules | `git rm -r --cached <file>`, fix `.gitignore`, notify team lead |
-| Story branch drifted far from `develop` | Infrequent rebasing | Rebase daily; target 3-day maximum branch lifetime |
+| Symptom                                 | Likely cause                           | Fix                                                             |
+| --------------------------------------- | -------------------------------------- | --------------------------------------------------------------- |
+| Agent ignores architecture decisions    | Context not loaded at session start    | Reference `architecture.md` explicitly at session start         |
+| Frequent `_bmad/context/` conflicts     | Uncoordinated edits by multiple people | Coordinate via GitHub Issues before editing shared context      |
+| AI makes decisions already decided      | Stale context in session               | Pull latest `develop`, reload context files                     |
+| Committed sensitive data                | Missing `.gitignore` rules             | `git rm -r --cached <file>`, fix `.gitignore`, notify team lead |
+| Story branch drifted far from `develop` | Infrequent rebasing                    | Rebase daily; target 3-day maximum branch lifetime              |
 
 ---
 

@@ -3,11 +3,9 @@ title: Use Case - Apply Digital Website Redesign
 description: The end-to-end scenario running through every tutorial—a real-world website redesign engagement with full project context.
 ---
 
-# Use Case: Apply Digital Website Redesign
-
-> **Type:** End-to-End Scenario
-> **Audience:** All — this use case connects every tutorial in the series
-> **Time:** Use as a reference throughout the full training path
+> **Type:** End-to-End Scenario\
+> **Audience:** All — this use case connects every tutorial in the series\
+> **Time:** Use as a reference throughout the full training path\
 > **Scenario:** A complete BMAD delivery workflow for a real-world website redesign
 
 ---
