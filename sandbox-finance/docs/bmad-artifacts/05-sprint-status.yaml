@@ -1,0 +1,44 @@
+sprint: 1
+name: "Apocalypse Fund — Workshop Sprint 1"
+goal: "Fix known bugs and deliver the first feature extension"
+
+stories:
+  - id: "1-1"
+    title: "Fix balance NaN bug"
+    epic: 1
+    type: bug
+    github_issue: BUG-001
+    development_status: ready-for-dev
+    story_file: stories/story-1-1-fix-balance-nan.md
+
+  - id: "1-2"
+    title: "Fix form reset bug"
+    epic: 1
+    type: bug
+    github_issue: BUG-002
+    development_status: ready-for-dev
+    story_file: stories/story-1-2-fix-form-reset.md
+
+  - id: "2-1"
+    title: "Delete a transaction"
+    epic: 2
+    type: feature
+    github_issue: FEATURE-001
+    development_status: ready-for-dev
+    story_file: stories/story-2-1-delete-transaction.md
+
+  - id: "2-2"
+    title: "Spending summary by category"
+    epic: 2
+    type: feature
+    github_issue: FEATURE-002
+    development_status: backlog
+    story_file: ""
+
+  - id: "3-1"
+    title: "Low balance warning"
+    epic: 3
+    type: feature
+    github_issue: FEATURE-003
+    development_status: backlog
+    story_file: ""
