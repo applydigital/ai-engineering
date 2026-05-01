@@ -16,7 +16,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "preview": "vite preview",
-    "build": "tsc -b && vite build"
+    "build": "tsc -b && vite build",
+    "fetch-ticket": "tsx scripts/fetch-ticket.ts"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -47,7 +48,8 @@
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
     "vite": "npm:rolldown-vite@7.1.14",
-    "vitest": "^4.0.7"
+    "vitest": "^4.0.7",
+    "tsx": "^4.19.4"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.1.14"
