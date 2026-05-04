@@ -17,7 +17,8 @@
     "build-storybook": "storybook build",
     "preview": "vite preview",
     "build": "tsc -b && vite build",
-    "fetch-ticket": "tsx scripts/fetch-ticket.ts"
+    "fetch-gh-ticket": "tsx scripts/fetch-gh-ticket.ts",
+    "fetch-jira-ticket": "tsx scripts/fetch-jira-ticket.ts"
   },
   "dependencies": {
     "react": "^19.1.1",

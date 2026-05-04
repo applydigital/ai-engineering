@@ -1,15 +1,15 @@
 #!/usr/bin/env tsx
 /**
- * fetch-ticket.ts
+ * fetch-gh-ticket.ts
  *
- * Fetches a GitHub issue from the ai-engineering repo and saves it as a
- * markdown file in _bmad-output/planning-artifacts/ for use with BMAD workflows.
+ * Fetches a GitHub issue and saves it as a markdown file in
+ * _bmad-output/planning-artifacts/ for use with BMAD workflows.
  *
  * Usage:
- *   npm run fetch-ticket -- <issue-number>
+ *   npm run fetch-gh-ticket -- <issue-number>
  *
  * Example:
- *   npm run fetch-ticket -- 1
+ *   npm run fetch-gh-ticket -- 1
  *
  * Requires:
  *   GITHUB_TOKEN in .env (personal access token with repo read scope)
@@ -44,8 +44,8 @@ const OUTPUT_DIR = join(ROOT, '_bmad-output', 'planning-artifacts');
 const issueNumber = process.argv[2];
 
 if (!issueNumber || Number.isNaN(Number(issueNumber))) {
-  console.error('❌  Usage: npm run fetch-ticket -- <issue-number>');
-  console.error('   Example: npm run fetch-ticket -- 1');
+  console.error('❌  Usage: npm run fetch-gh-ticket -- <issue-number>');
+  console.error('   Example: npm run fetch-gh-ticket -- 1');
   process.exit(1);
 }
 
