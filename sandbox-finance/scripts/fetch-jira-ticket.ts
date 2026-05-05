@@ -142,7 +142,7 @@ function adfToMarkdown(node: JiraDoc, depth = 0): string {
 
 function toMarkdown(issue: Awaited<ReturnType<typeof fetchIssue>>): string {
   const { fields } = issue;
-  const labels = fields.labels.join(', ') || 'none';
+  const labels = (fields.labels ?? []).join(', ') || 'none';
   const assignee = fields.assignee?.displayName ?? 'unassigned';
   const description = fields.description
     ? adfToMarkdown(fields.description).trim()
