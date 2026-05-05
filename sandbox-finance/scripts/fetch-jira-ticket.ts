@@ -60,7 +60,7 @@ if (!JIRA_BASE_URL || !JIRA_EMAIL || !JIRA_API_TOKEN) {
 }
 
 async function fetchIssue(key: string) {
-  const url = `${JIRA_BASE_URL}/rest/api/3/issue/${key}?fields=summary,description,status,labels,assignee,reporter,issuetype,created,updated,comment`;
+  const url = `${JIRA_BASE_URL}/rest/api/3/issue/${key}?fields=summary,description,status,labels,assignee,reporter,issuetype,created,updated,comment,customfield_10303`;
   const credentials = Buffer.from(`${JIRA_EMAIL}:${JIRA_API_TOKEN}`).toString('base64');
 
   const res = await fetch(url, {
@@ -87,6 +87,7 @@ async function fetchIssue(key: string) {
       issuetype: { name: string };
       created: string;
       updated: string;
+      customfield_10303: JiraDoc | null;
     };
   }>;
 }
@@ -148,6 +149,10 @@ function toMarkdown(issue: Awaited<ReturnType<typeof fetchIssue>>): string {
     ? adfToMarkdown(fields.description).trim()
     : '_No description provided._';
 
+  const acceptanceCriteria = fields.customfield_10303
+    ? adfToMarkdown(fields.customfield_10303).trim()
+    : null;
+
   return `# ${issue.key}: ${fields.summary}
 
 ## Metadata
@@ -163,7 +168,7 @@ function toMarkdown(issue: Awaited<ReturnType<typeof fetchIssue>>): string {
 ## Description
 
 ${description}
-`;
+${acceptanceCriteria ? `\n## Acceptance Criteria\n\n${acceptanceCriteria}\n` : ''}`;
 }
 
 async function main() {
